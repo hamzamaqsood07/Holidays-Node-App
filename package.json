@@ -1,0 +1,30 @@
+{
+  "name": "holidays-node-app",
+  "version": "1.0.0",
+  "description": "The app provides RESTful APIs to client applications regarding holidays of different countries.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "build": "rimraf dist && tsc",
+    "start": "node dist/index.js",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\""
+  },
+  "author": "Hamza Maqsood",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/config": "^3.3.4",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.4.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.4",
+    "config": "^3.3.12",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
