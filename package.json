@@ -1,10 +1,11 @@
 {
   "name": "holidays-node-app",
   "version": "1.0.0",
+  "type": "module",
   "description": "The app provides RESTful APIs to client applications regarding holidays of different countries.",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "dev": "nodemon --watch src --exec tsx src/index.ts",
     "build": "rimraf dist && tsc",
     "start": "node dist/index.js",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\""
@@ -19,6 +20,7 @@
     "nodemon": "^3.1.4",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
+    "tsx": "^4.17.0",
     "typescript": "^5.5.4"
   },
   "dependencies": {
