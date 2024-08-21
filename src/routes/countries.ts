@@ -18,7 +18,7 @@ countriesRouter.get('/', async (req, res) => {
       console.log('Sending response from cache');
       return res.send(JSON.parse(cachedData));
     }
-    const response = await axios.get(`${apiUrl}/countries?api_key=${apiKey}`);
+    const response=await axios.get(`${apiUrl}/countries?api_key=${apiKey}`);
     const responseData = response.data.response;
     // Store data in cache with an expiration time
     await redisClient.set(redisKey, JSON.stringify(responseData), {

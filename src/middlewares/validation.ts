@@ -7,15 +7,10 @@ export const validateQueryParams =
     try {
       await schema.validate(req.query, { abortEarly: false });
       next();
-    } catch (err) {
-      if (err instanceof Yup.ValidationError) {
-        console.error(err.errors);
-        res.status(400).json({
-          errors: err.errors, // Yup error messages
-        });
-      } else {
-        console.error(err);
-        res.status(500).send();
-      }
+    } catch (err: any) {
+      console.error(err.errors);
+      res.status(400).json({
+        errors: err.errors, // Yup error messages
+      });
     }
   };
