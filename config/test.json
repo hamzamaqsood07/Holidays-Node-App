@@ -1,0 +1,4 @@
+{
+    "apiUrl": "https://calendarific.com/api/v2",
+    "cacheTTL": 3600
+  }
