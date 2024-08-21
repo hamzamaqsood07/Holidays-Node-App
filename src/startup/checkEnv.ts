@@ -7,7 +7,7 @@ export const checkEnv = () => {
   checkEnvironmentVariable('REDIS_DB_NUMBER');
 };
 const checkEnvironmentVariable = function (variable: string) {
-  if (process.env[variable]===undefined) {
+  if (process.env[variable] === undefined) {
     console.log(`FATAL ERROR: ${variable} is not defined.`);
     process.exit(1);
   }
